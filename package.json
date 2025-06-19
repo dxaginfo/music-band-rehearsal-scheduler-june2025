@@ -1,0 +1,38 @@
+{
+  "name": "rehearsal-scheduler",
+  "version": "1.0.0",
+  "description": "A web application for automatically scheduling band rehearsals",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm test && cd ../client && npm test",
+    "test:e2e": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxaginfo/music-band-rehearsal-scheduler-june2025.git"
+  },
+  "keywords": [
+    "music",
+    "band",
+    "rehearsal",
+    "scheduling",
+    "calendar",
+    "attendance"
+  ],
+  "author": "DX AG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dxaginfo/music-band-rehearsal-scheduler-june2025/issues"
+  },
+  "homepage": "https://github.com/dxaginfo/music-band-rehearsal-scheduler-june2025#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "cypress": "^13.6.0"
+  }
+}
